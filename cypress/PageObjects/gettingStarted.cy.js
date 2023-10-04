@@ -18,11 +18,11 @@ class TodoListWebComponents {
     }
 
 
-    CheckTodoList(lenght, item) { //aqui estou falando que quero receber dois parâmetros
+    CheckTodoList(lenght, item) { 
         cy.get('.todo-list li')
-            .should('have.length', lenght) //o primeiro é quantos itens tenho na todo list
-            .last()//aqui sigo par ao último item da lista 
-            .should('have.text', item)//o segundo é qual item está listado como útimo
+            .should('have.length', lenght) 
+            .last()
+            .should('have.text', item)
     }
 
     CheckDoneAnItem(nameItemToCheck) {
@@ -63,6 +63,7 @@ class TodoListWebComponents {
     }
 
     ConfirmNoHaveItemIncomplet(nameItemIncomplet) {
+        cy.get('.filters > :nth-child(3) > a').click()
         cy.contains(nameItemIncomplet).should('not.exist')
     }
 
