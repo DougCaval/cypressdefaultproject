@@ -32,11 +32,7 @@ context('Actions', () => {
     
   })
   it('Disable error checking no Disable Text Area', () => {
-    cy.get('.action-disabled')
-      // Ignore error checking prior to type
-      // like whether the input is visible or disabled
-      .type('disabled error checking', { force: true })
-      .should('have.value', 'disabled error checking')
+    commandActionsMethod.DisableCheck('disabled error checking')
   })
 
   it('.focus() - focus on a DOM element', () => {

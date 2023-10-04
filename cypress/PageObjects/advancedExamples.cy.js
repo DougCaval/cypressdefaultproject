@@ -8,5 +8,11 @@ class CommandActionsMethods{
         cy.get('.action-email').type(specialKeys)
         
     }
+
+    DisableCheck(textDisableArea){
+        cy.get('.action-disabled')
+      .type(textDisableArea, { force: true })
+      .should('have.value', textDisableArea)
+    }
 }
 export default CommandActionsMethods
