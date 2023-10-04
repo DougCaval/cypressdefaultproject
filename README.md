@@ -1,2 +1,2 @@
 # cypressdefaultproject
-Projeto base par aCypress
+Projeto base para Cypress
